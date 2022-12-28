@@ -1,5 +1,4 @@
-import "./categories.styles.scss";
-import CategoryMenu from "./components/categories-menu/categories-menu.component";
+  import CategoryMenu from "./components/categories-menu/categories-menu.component";
 
 function App() {
   const categories = [

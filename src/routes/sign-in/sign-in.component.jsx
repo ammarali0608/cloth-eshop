@@ -5,10 +5,12 @@ import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
   signInWithGoogleRedirect,
+  createAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.util";
 // import { async } from "@firebase/util";
 
 import SignUpForm from "../../components/sign-up-form/sign-up-form.component";
+
 const SignIn = () => {
   // async function effectFunction() {
   //   const response = await getRedirectResult(auth);

@@ -17,12 +17,7 @@ const defaultFormFields = {
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
-
-  const val = useContext(UserContext);
-
-  console.log("hit");
-
-  console.log(formFields);
+  const { setCurrentUser } = useContext(UserContext);
 
   const handleSubmits = async (event) => {
     event.preventDefault();
@@ -35,7 +30,7 @@ const SignUpForm = () => {
         email,
         password
       );
-
+      setCurrentUser(user);
       const userDocRef = await createUserDocumentFromAuth(user, {
         displayName,
       });

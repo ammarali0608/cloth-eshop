@@ -23,7 +23,9 @@ const SignInForm = () => {
 
   const signInWithGoogle = async () => {
     const { user } = await signInWithGooglePopup();
-    const userDocRef = await createUserDocumentFromAuth(user);
+    setCurrentUser(user);
+
+    await createUserDocumentFromAuth(user);
   };
 
   const handleSubmits = async (event) => {
@@ -85,6 +87,7 @@ const SignInForm = () => {
             Google sign in
           </Button>
         </div>
+        <img src="../../../public/logo192.png" />
       </form>
     </div>
   );

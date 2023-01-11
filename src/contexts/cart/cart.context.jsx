@@ -55,6 +55,9 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     const newCartCount = cartItems.reduce((acc, val) => acc + val.quantity, 0);
     setCartCount(newCartCount);
+  }, [cartItems]);
+
+  useEffect(() => {
     const newTotalPrice = cartItems.reduce(
       (total, item) => total + item.quantity * item.price,
       0
@@ -81,6 +84,7 @@ export const CartProvider = ({ children }) => {
     removeItemFromCart,
     clearItemFromCart,
     cartCount,
+    totalPrice,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

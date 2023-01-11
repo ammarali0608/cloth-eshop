@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 
 import CategoryMenu from "../../components/categories-menu/categories-menu.component";
+import Checkout from "../checkout/checkout.component";
 function Home() {
   const categories = [
     {

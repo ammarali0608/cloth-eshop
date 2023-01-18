@@ -3,9 +3,9 @@
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   row-gap: 50px;
-
-  .title {
-    font-size: 38px;
-    margin-bottom: 25px;
-  }
+}
+.category-title {
+  font-size: 38px;
+  margin-bottom: 25px;
+  text-align: center;
 }

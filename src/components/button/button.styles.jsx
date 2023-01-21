@@ -1,3 +1,7 @@
+import styled from "styled-components";
+
+export const ButtonContanier
+
 .button-container {
   min-width: 165px;
   width: auto;

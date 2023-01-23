@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonContanier
-
+export const ButtonContanier = 
 
 .button-container {
   min-width: 165px;

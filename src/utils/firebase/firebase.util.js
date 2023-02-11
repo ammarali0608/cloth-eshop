@@ -1,4 +1,6 @@
 import { initializeApp } from "firebase/app";
+// import dotenv from "dotenv";
+
 import {
   getAuth,
   signInWithRedirect,
@@ -20,14 +22,15 @@ import {
   getDocs,
 } from "firebase/firestore";
 const firebaseConfig = {
-  apiKey: "AIzaSyB73uHT6E1-klIL5Hbl-DYSLMiaJ2n3C9Q",
-  authDomain: "cloth-eshop.firebaseapp.com",
-  projectId: "cloth-eshop",
-  storageBucket: "cloth-eshop.appspot.com",
-  messagingSenderId: "104237377183",
-  appId: "1:104237377183:web:f8752dad7d0d1075d524aa",
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
+console.log(firebaseConfig);
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 

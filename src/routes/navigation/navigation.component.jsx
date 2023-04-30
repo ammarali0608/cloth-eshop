@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import { Fragment, useContext } from "react";
 
@@ -29,22 +29,18 @@ const Navigation = () => {
     <Fragment>
       <NavigationContainer>
         <div>
-          <LogoContainer className="logo-container" to="/">
-            <CrwnLogo className="logo" />
+          <LogoContainer to="/">
+            <CrwnLogo />
           </LogoContainer>
         </div>
-        <NavLinksContainer className="nav-links-container">
-          <NavLink className="nav-link" to="/shop">
-            SHOP
-          </NavLink>
+        <NavLinksContainer>
+          <NavLink to="/shop">SHOP</NavLink>
           {currentUser ? (
-            <NavLink as="span" className="nav-link" onClick={SignOutUser}>
+            <NavLink as="span" onClick={SignOutUser}>
               SIGN OUT
             </NavLink>
           ) : (
-            <NavLink className="nav-link" to="/auth">
-              SIGN IN
-            </NavLink>
+            <NavLink to="/auth">SIGN IN</NavLink>
           )}
           <CartIcon />
         </NavLinksContainer>
